@@ -11,6 +11,7 @@
 <body>
     <div id="time">
         <div class="circulo" style="--clr: #ff2972;">
+            <div class="dots hr_dot"></div>
             <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70" id="hh"></circle>
@@ -18,6 +19,7 @@
             <div id="hora">00</div>
         </div>
         <div class="circulo" style="--clr: #fee800;">
+            <div class="dots min_dot"></div>
             <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70" id="mm"></circle>
@@ -25,6 +27,7 @@
             <div id="minutos">00</div>
         </div>
         <div class="circulo" style="--clr: #04fc43;">
+            <div class="dots sec_dot"></div>
             <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70" id="ss"></circle>
@@ -69,6 +72,15 @@
             minutos.innerHTML = m;
             segundos.innerHTML = s;
             ampm.innerHTML = am;
+
+            hh.style.strokeDashoffset = 440 - (440 * h) / 12;
+            //12 hrs clock
+
+            mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+            // 60 minutos
+
+            ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+            // 60 segundos
 
         })
 
