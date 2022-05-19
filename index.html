@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+</head>
+<body>
+    <div id="time">
+        <div class="circulo">
+            <div id="hora">00</div>
+        </div>
+        <div class="circulo">
+            <div id="minutos">00</div>
+        </div>
+        <div class="circulo">
+            <div id="segundos">00</div>
+        </div>
+        <div class="ap">
+            <div id="ampm">AM</div>
+        </div>
+    </div>
+
+    <script>
+        let hora = document.getElementById('hora');
+        let minutos = document.getElementById('minutos');
+        let segundos = document.getElementById('segundos');
+        let ampm = document.getElementById('ampm');
+
+        let h = new Date().getHours();
+        let m = new Date().getMinutes();
+        let s = new Date().getSeconds();
+    </script>
+</body>
+</html>
