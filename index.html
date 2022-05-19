@@ -10,13 +10,25 @@
 </head>
 <body>
     <div id="time">
-        <div class="circulo">
+        <div class="circulo" style="--clr: #ff2972;">
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
             <div id="hora">00</div>
         </div>
-        <div class="circulo">
+        <div class="circulo" style="--clr: #fee800;">
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
             <div id="minutos">00</div>
         </div>
-        <div class="circulo">
+        <div class="circulo" style="--clr: #04fc43;">
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
             <div id="segundos">00</div>
         </div>
         <div class="ap">
@@ -25,31 +37,38 @@
     </div>
 
     <script>
-        let hora = document.getElementById('hora');
-        let minutos = document.getElementById('minutos');
-        let segundos = document.getElementById('segundos');
-        let ampm = document.getElementById('ampm');
 
-        let h = new Date().getHours();
-        let m = new Date().getMinutes();
-        let s = new Date().getSeconds();
-        let am = h >= 12 ? "PM" : "AM";
+        setInterval(() =>{
 
-        // Converter 24hr para 12hr
+            let hora = document.getElementById('hora');
+            let minutos = document.getElementById('minutos');
+            let segundos = document.getElementById('segundos');
+            let ampm = document.getElementById('ampm');
 
-        if (h > 12){
-            h = h - 12;
-        }
+            let h = new Date().getHours();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();
+            let am = h >= 12 ? "PM" : "AM";
 
-        // Adicionar o zero na frente do dígito
-        h = (h < 10) ? "0" + h : h;
-        m = (m < 10) ? "0" + m : m;
-        s = (s < 10) ? "0" + s : s;
+            // Converter 24hr para 12hr
 
-        hora.innerHTML = h;
-        minutos.innerHTML = m;
-        segundos.innerHTML = s;
-        ampm.innerHTML = am;
+            if (h > 12){
+                h = h - 12;
+            }
+
+            // Adicionar o zero na frente do dígito
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            hora.innerHTML = h;
+            minutos.innerHTML = m;
+            segundos.innerHTML = s;
+            ampm.innerHTML = am;
+
+        })
+
+        
     </script>
 </body>
 </html>
