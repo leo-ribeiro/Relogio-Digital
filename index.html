@@ -13,21 +13,21 @@
         <div class="circulo" style="--clr: #ff2972;">
             <svg>
                 <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="hh"></circle>
             </svg>
             <div id="hora">00</div>
         </div>
         <div class="circulo" style="--clr: #fee800;">
             <svg>
                 <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="mm"></circle>
             </svg>
             <div id="minutos">00</div>
         </div>
         <div class="circulo" style="--clr: #04fc43;">
             <svg>
                 <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="ss"></circle>
             </svg>
             <div id="segundos">00</div>
         </div>
@@ -44,6 +44,10 @@
             let minutos = document.getElementById('minutos');
             let segundos = document.getElementById('segundos');
             let ampm = document.getElementById('ampm');
+
+            let hh = document.getElementById('hh');
+            let mm = document.getElementById('mm');
+            let ss = document.getElementById('ss');
 
             let h = new Date().getHours();
             let m = new Date().getMinutes();
